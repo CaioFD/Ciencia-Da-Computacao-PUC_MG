@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 bool cores(int vermelho, int verde, int azul){
     
