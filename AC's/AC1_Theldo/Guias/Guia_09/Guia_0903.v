@@ -14,9 +14,9 @@ module pulse ( signal, clock );
     always @ ( posedge clock ) 
     begin : pulse
         signal = 1'b1;
-        #32 signal = 1'b0; 
-        #64 signal = 1'b1;
-        #32 signal = 1'b0;  
+        #24 signal = 1'b0;  
+        #48 signal = 1'b1;    
+        #24 signal = 1'b0;   
     end // end pulse
 endmodule // pulse ( )
 
