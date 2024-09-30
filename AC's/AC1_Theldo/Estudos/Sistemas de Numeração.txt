@@ -12,15 +12,15 @@ Sistema decimal:
 
 Para poder converter um valor decimal ( base = 10 ) para binário (base = 2), usar divisões sucessivas por 2 e tomar os restos na ordem inversa em que forem calculados:
 
-OPERAÇÃO                    QUOCIENTE                  RESTO
+OPERAÇÃO                                QUOCIENTE                         RESTO
    163/2                =                   81                +             1       (último)
-     81/2                =                   40                +             1
-     40/2                =                   20                +             0
-     20/2                =                   10                +             0
-     10/2                =                     5                +             0
-       5/2                =                     2                +             1
-       2/2                =                     1                +             0
-       1/2                =                     0                +             1      (primeiro)  
+    81/2                =                   40                +             1
+    40/2                =                   20                +             0
+    20/2                =                   10                +             0
+    10/2                =                    5                +             0
+     5/2                =                    2                +             1
+     2/2                =                    1                +             0
+     1/2                =                    0                +             1      (primeiro)  
 
 Sistema Binário: 
 1010 0011(2)  - número na base 2
@@ -31,16 +31,12 @@ Converter de Binário para Decimal:
 Para pode converter um valor binário (base = 2) para um valor decimal (Usar a soma dos produtos de cada algarismo pela potência da base equivalente a posição)
 
 Sistema Binário:
-1010 0011(2) - número na base 2
+1 0 1 0  0 0 1 1(2) - número na base 2
 | | | |  | | | |
-76543210
+7 6 5 4  3 2 1 0
 Sistema Decimal:
 1x2^7 + 0x2^6 + 1x2^5 + 0x2^4 + 0x2^3 + 0x2^2 + 1x2^1 + 1x2^0 - forma canônica
-  128  +     0     +    32   +    0     +    0      +    0      +    2     +     1    = 163(10)
-
-
-
-
+ 128  +   0   +   32  +   0   +   0   +   0   +   2   +   1   = 163(10)
 
 
 
@@ -49,11 +45,11 @@ Converter de Decimal para base 4(quaternário):
 
 Para se converter um valor decimal para a base 4:
 
-OPERAÇÃO                    QUOCIENTE                  RESTO
+OPERAÇÃO                                QUOCIENTE                         RESTO
    163/4                =                   40                +             3       (último)
-     40/4                =                   10                +             0
-     10/4                =                     2                +             2
-       2/4                =                     0                +             2      (primeiro)
+    40/4                =                   10                +             0
+    10/4                =                    2                +             2
+     2/4                =                    0                +             2      (primeiro)
 
 
 Sistema quaternário:
@@ -65,11 +61,11 @@ Converter de Decimal para base 8(octal):
 
   Para converter um valor decimal para a base 8 ( octal ): 
 
-  operação      quociente    resto 
-  163 / 8     =       20      +      3   ( último ) 
-   20  / 8     =        2       +      4    
-    2   / 8     =        0       +      2   ( primeiro ) 
-
+  OPERAÇÃO                                QUOCIENTE                       RESTO
+   163/8                =                   20                +             3       (último)
+    20/8                =                    2                +             4
+     2/8                =                    0                +             2       (primeiro)
+      
   Sistema octal :
   243(8) - número na base 8 
 
@@ -78,11 +74,13 @@ Converter de Decimal para base 16(Hexadecimal):
 
   Para converter um valor decimal para a base 16 ( hexadecimal ): 
 
-  operação      quociente    resto 
-    163 / 16   =     10        +     3   ( último ) 
-     10  / 16   =      0        +    10   ( primeiro, substituindo pelo algarismo A=10 ) 
-{0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F} 
-10 = A, 11= B, 12 = C, 13 = D, 14 = E, 15 = F.
+   OPERAÇÃO                              QUOCIENTE                        RESTO
+   163/16                =                   10                +              3       (último)
+    10/16                =                    0                +             10       ( primeiro, substituindo pelo algarismo A=10 )
+                                                                                        {0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F}
+
+                                                                                        10 = A, 11= B, 12 = C, 13 = D, 14 = E, 15 = F.
+
   Sistema hexadecimal :
   A3(16) - número na base 16 
 
@@ -91,50 +89,45 @@ Converter de BASE 4 para DECIMAL:
 
   Sistema quaternário :
   2203(4) =  2x4^3 + 2x4^2 + 0x4^1 + 3x4^0  - número na base 4 na forma canônica 
-               =    128   +   32    +    0      +    3      = 163(10) 
-Converter de BASE 8 para DECIMAL:
+          =   128  +   32  +   0   +   3    = 163(10) 
 
+
+Converter de BASE 8 para DECIMAL:
 
   Sistema octal :
   243(8) =  2x8^2  +   4x8^1   + 3x8^0  - número na base 8 na forma canônica 
-             =    128    +      32     +      3    = 163(10) 
+         =   128   +     32    +   3    = 163(10) 
 
 
 Converter de BASE 16 para DECIMAL:
 
   Sistema hexadecimal :
   A3(16) =  (A=10)x16^1    +  3x16^0  - número na base 16 forma canônica 
-         =                   160      +      3       =   163(10)
+         =       160      +      3    =   163(10)
 
 
 
 CONVERSÃO DE BASES DE POTÊNCIAS MÚLTIPLAS (BIN -> QUAT, BIN ->OCTAL….)
 (sem necessitar de decimal):
 
-As bases que são potências múltiplas de outra compartilham propriedades especiais,  como a possibilidade de conversões entre elas, sem passar pela base decimal:
-
+As bases que são potências múltiplas de outra compartilham propriedades especiais,  
+como a possibilidade de conversões entre elas, sem passar pela base decimal:
 OBS: caso seja necessário, complete com zeros para formar os grupos.
 
 			
 Sistema binário(base=2) para sistema quaternário(base=4):
-
 Agrupar de 2 em 2 e substituir pelos dígitos equivalentes :
-
 1010 0011(2) = [10] [10] [00] [11] (4) = 2203(4)
 
+
 Sistema binário(base=2) para sistema octal(base=8):
-
 Agrupar de 3 em 3 e substituir pelos dígitos equivalentes :
-
 1010 0011(2) = [010] [100] [011] (8) = 243(8)
 
+
 Sistema binário(base=2) para sistema hexadecimal(base=16):
-
 Agrupar de 4 em 4 e substituir pelos dígitos equivalentes :
-
 1010 0011(2) = [1010] [0011] (16) = A3(16) e A(16)=10
-
-
 
 
 
@@ -343,7 +336,7 @@ Sistema Hexadecimal:
      110100(2)            34(16)  ← resultado 
 
 
-Subtração:
+Subtração:...........
 
     Relações fundamentais: 
 
@@ -369,10 +362,176 @@ Subtração:
 
 
 
+Multiplicação:
+
+Sistema Binário:
+
+  Relações fundamentais: 
+
+  0(2) * 0(2) = 0(2) 
+  0(2) * 1(2) = 0(2) 
+  1(2) * 0(2) = 0(2) 
+  1(2) * 1(2) = 1(2) 
+
+  Aplicação: 
+
+     101101(2)   ← operando 1 
+  *     101(2)   ← operando 2 
+   ___________ 
+      1111 
+       101101 
+ +    000000- 
+     101101-- 
+   ___________ 
+     11100001(2) ← resultado 
+
+
+Divisão:
+
+
+  Aplicação: 
+
+    11100001(2) ÷ 101 (2)                  11100001(2) ÷ 101 (2)  
+  - 101         =   1(2)                 - 101         =   10(2) 
+    ___                                     ____ 
+    010                                     0100 
+
+
+    11100001(2) ÷ 101 (2)                  11100001(2) ÷ 101 (2) 
+  - 101         = 101(2)                 - 101         = 1011(2) 
+    _____                                  _____ 
+    01000                                   01000 
+  -   101                                   - 101 
+    _____                                  ______ 
+    00011                                  000110 
+                                            - 101 
+                                           ______ 
+                                           0000010 
+
+
+    11100001(2)  ÷ 101 (2)                  11100001(2)  ÷ 101 (2) 
+  - 101          = 10110(2)               - 101          = 101101(2) 
+    _____                                   _____ 
+    01000                                   01000 
+  - 101                                   -   101 
+    ______                                  ______ 
+    000110                                  000110 
+  -    101                                -    101 
+    ________                                ________ 
+    00000101                                00000101 
+  -      101 
+    ________ 
+    00000000
+
+
+
+REPRESENTAÇÃO DE DADOS
+
+A representação binária depende da quantidade de bits disponíveis e dos formatos escolhidos.
+Para os valores inteiros, por exemplo, pode-se utilizar o formato em que o primeiro bit, à esquerda, para o sinal e o restante para a amplitude, responsável pela magnitude (grandeza) do valor representado. 
+
+Exemplo: 
+ 5(10)  =  101(2) 
+
++5(10) = 0101(2) 
+
+-5(10) = 1101(2) 
+
+Essa representação, contudo, não é conveniente para realizar operações, pois ao adicionar ambos, obtém-se:
+
++5(10)     =     0101(2) 
+-5(10)     =     1101(2) 
+________         _______ 
+0(10)      = (1) 0010(2) 
+
+O que ultrapassa a quantidade de bits originalmente escolhida e, obviamente, não é igual a zero em sua amplitude.
 
 
 
 
+
+
+
+
+COMPLEMENTO DE 1:
+Uma das possíveis representações para valores negativos pode ser aquela onde se invertem os valores individuais de cada bit.
+
+Exemplo:
+ 5(10) =  101(2) 
+
++5(10) = 0101(2) 
+
+-5(10) = 1010(2)   (complemento de 1) 
+
+Essa representação, contudo também não é conveniente para realizar operações, pois ao adicionar ambos,obtém-se:
+
+ +5(10)    =      0101(2) 
+ -5(10)    =      1010(2) +
+_______          ________ 
+- 0(10)    =      1111(2) → +0(10) = 0000(2) 
+
+O que mantém a quantidade de bits originalmente escolhida, mas gera duas representações para zero(-0) e (+0), o que requer ajustes adicionais nas operações.
+
+COMPLEMENTO DE 2:
+Outra das possíveis representações para valores negativos pode ser aquela onde se invertem os valores individuais de cada bit, e acrescenta-se mais uma unidade ao valor encontrado, buscando completar o que falta para atingir a próxima potência da base.
+
+Exemplo:
+ 5(10) =  101(2) 
+
++5(10) = 0101(2) 
+
+-5(10) = 1010(2)   ( complemento de 1, ou C1(5) ) 
+
+-5(10) = 1011(2)   ( complemento de 2, ou C2(5) ) 
+
+Essa representação é bem mais conveniente para realizar operações, pois ao adicionar ambos, obtém-se:
+
++5(10)    =     0101(2) 
+-5(10)    =     1011(2) +
+________        _______ 
+ 0(10)    = (1) 0000(2)  
+
+
+
+
+
+Com uma única representação para zero, mas com um excesso (1) que não é comportado pela quantidade de bits originalmente escolhida. Porém, se desprezado esse excesso, o valor poderá ser considerado correto, com a ressalva de que a quantidade de bits deverá ser rigorosamente observada ( ou haverá risco de transbordamento - OVERFLOW)
+
+Para efeitos práticos, o tamanho da representação deverá ser sempre indicado, e as operações deverão ajustar os operandos para a mesma quantidade de bits ( de preferência, a maior possível).
+
+Exemplo: 
+ 5(10) =  101(2) 
+
++5(10) = 0101(2) 
+
+-5(10) = 1010(2)   ( complemento de 1, com 4 bits ou C14 (5) ) 
+
+-5(10) = 1011(2)   ( complemento de 2, com 4 bits ou C24 (5) ) 
+
+logo, 
+
+C1,5 (+5) = C1 ( 00101(2) )    = 11010(2) 
+
+C2,5 (+5) = C2 ( 00101(2) )    = 11011(2) 
+
+C1,8 (+5) = C1 ( 00000101(2) ) = 11111010(2) 
+
+C2,8 (+5) = C2 ( 00000101(2) ) = 11111011(2) 
+
+De modo inverso, dado um valor em complemento de 2, se desejado conhecer o equivalente positivo, basta retirar uma unidade e substituir os valores individuais de cada dígito binário.
+
+Exemplo:
+1011(2)   ( complemento de 2, com 4 bits ) 
+
+1011(2) - 1 = 1010(2) e invertendo ( 0101(2) ) = +5(10) 
+
+logo, 1011(2) = - 5(10)  
+
+Portanto, para diferentes quantidades de bits: 
+
+11011(2) = 11010(2) = 00101(2) = 5(10) 
+
+11111011(2) = 11111010(2) = 00000101(2) = -5(10)
 
 
 
