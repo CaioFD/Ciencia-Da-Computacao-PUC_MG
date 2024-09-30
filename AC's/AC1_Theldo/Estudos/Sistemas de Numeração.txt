@@ -287,6 +287,90 @@ Sistema Hexadecimal:
 
 
 
+OPERAÇÕES ARITMÉTICAS:
+
+
+Adição:
+
+Sistema binário:
+  Relações fundamentais: 
+
+  0(2) + 0(2) =   0(2) 
+  0(2) + 1(2) =   1(2) 
+  1(2) + 0(2) =   1(2) 
+  1(2) + 1(2) =  10(2)   ( zero e "vai-um" para a próxima potência ) 
+
+  Aplicação: 
+  
+      1111      ← "vai-um" 
+     101101(2)  ← operando 1 
+  +     111(2)  ← operando 2 
+     _________ 
+     110100(2)  ← resultado 
+
+Sistema Quaternário:
+  Aplicação: 
+
+     1111                11      ← "vai-um"   ( excessos de 4 ) 
+    101101(2)            231(4)  ← operando 1 
+  +    111(2)          +  13(4)  ← operando 2 
+    _________           _______       
+    110100(2)            310(4)  ← resultado 
+
+
+
+
+
+
+Sistema octal:
+  Aplicação: 
+
+     1111                1      ← "vai-um"   ( excessos de 8 ) 
+    101101(2)            55(8)  ← operando 1 
+  +    111(2)          +  7(8)  ← operando 2 
+    _________            _____ 
+    110100(2)            64(8)  ← resultado 
+
+
+Sistema Hexadecimal:
+
+  Aplicação: 
+
+      1111                1       ← "vai-um"   ( excessos de 16 ) 
+     101101(2)            2D(16)  ← operando 1 
+  +     111(2)         +   7(16)  ← operando 2 
+   _________            ______ 
+     110100(2)            34(16)  ← resultado 
+
+
+Subtração:
+
+    Relações fundamentais: 
+
+      0(2) - 0(2) =   0(2) 
+      0(2) - 1(2) = ??? 
+      1(2) - 0(2) =   1(2) 
+      1(2) - 1(2) =   0(2)  
+     10(2) - 1(2) =  01(2) ( zero e "vem-um" para a potência considerada ) 
+    100(2) - 1(2) = 011(2) ( zero e "vem-um" para as potências necessitadas ) 
+
+    Aplicação: 
+                         1                 (10)                                     1      ← "vem-um" 
+     101101(2)        101001(2)        1010 (0)1(2)        100 (10) 01(2)       101101(2)  ← operando 1 
+    -   111(2)       -   111(2)       -   1  1 1(2)       -      1  11(2)       -  111(2)  ← operando 2 
+     _________        _________        ____________       _______________       _________ 
+          0(2)             0(2)              1 0(2)        100   1  10(2)       100110(2)  ← resultado 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
