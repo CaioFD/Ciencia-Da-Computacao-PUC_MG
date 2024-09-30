@@ -157,6 +157,36 @@ Sistema Decimal:
   Parar, se a parte fracionária se tornar igual a zero. 
 
 
+  Sistema Binário:
+  0,1011(2) - número na base 2 
+
+  ou  
+
+      2^-1     2^-2      2^-3       2^-4   - potências negativas da base 2 
+       0,5     0,25     0,125     0,0625   - valor decimal da potência na base 10 
+  0,     1        0         1          1   - coeficientes 
+
+  Caso a parte fracionária não se tornar igual a zero dentro de certo número de operações, parar quando for 
+  alcançada a precisão desejada ou se esgotar a quantidade de casas disponíveis. Também podem surgir dízimas, 
+  periódicas ou não. 
+
+  operação    produto    parte inteira      parte fracionária     binário 
+  0,69     *     2     =     1,38        =       1     ,38          0,1            ( primeiro ) 
+  0,38     *     2     =     0,76        =       0     ,76          0,10 
+  0,76     *     2     =     1,52        =       1     ,52          0,101 
+  0,52     *     2     =     1,04        =       1     ,04          0,1011 
+  0,04     *     2     =     0,08        =       0     ,08          0,10110 
+  0,08     *     2     =     0,16        =       0     ,16          0,101100 
+  0,16     *     2     =     0,32        =       0     ,32          0,1011000 
+  0,32     *     2     =     0,64        =       0     ,64          0,10110000 
+  0,64     *     2     =     1,28        =       1     ,28          0,101100001 
+  0,28     *     2     =     0,56        =       0     ,56          0,1011000010 
+  0,56     *     2     =     1,02        =       1     ,02          0,10110000101 
+  0,02     *     2     =     0,04        =       0     ,04          0,101100000010 ( dízima ) 
+
+
+
+
 
 
 
