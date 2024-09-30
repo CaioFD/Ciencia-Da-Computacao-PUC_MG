@@ -1,0 +1,112 @@
+
+ÁLGEBRA DE BOOLE
+
+Introdução:
+
+Em Matemática, chama-se proposição ao enunciado de uma verdade que se quer demonstrar, ou como usaremos: uma sentença que pode ser falsa (0), ou verdadeira (1), mas nunca ambos ao mesmo tempo.
+
+A conjunção é uma relação entre sentenças que estabelece um resultado verdadeiro (1) quando associadas duas proposições (p e q), ambas verdadeiras ( iguais a 1 ). Basta uma delas ser falsa (0), para que a conjunção (s) também seja falsa (0).
+
+A porta AND ( E ) é um componente de circuito lógico que implementa essa relação; pode ter duas (p, q), ou mais entradas, e a saída (s) assumirá o valor 1 ( verdadeiro ) se, e somente se, todas as entradas forem iguais a 1 (verdadeiras ); caso uma, ou mais entradas forem iguais a 0 ( falso ), a saída terá valor igual a 0 ( falso ).
+
+A disjunção é uma relação entre sentenças que estabelece um resultado falso (0) quando duas proposições (p e q) forem falsas (0). Basta uma delas ser verdadeira (1), para que a disjunção também seja verdadeira (1).
+
+A porta OR ( OU ) é um componente de circuito lógico que implementa essa relação; pode ter duas (p, q), ou mais entradas, e a saída (s) assumirá o valor 0 (falso) se, e somente se, todas as entradas forem iguais a 0 (falso); caso uma, ou mais entradas forem iguais a 1 (verdadeiro), a saída terá valor 1 (verdadeiro).
+
+A negação determina que se uma proposição (p) for falsa (0), seu resultado será verdadeiro (1), ou vice-versa.
+
+A porta NOT ( NÃO ) é um componente de circuito lógico que implementa essa relação, também chamada de INVERTER ( INVERSOR ), só possui uma entrada (p), e a saída assumirá o valor 1 ( verdadeiro ), se a entrada for igual a 0 ( falso ); senão, a saída terá valor 0 ( falso ), se a entrada for igual a 1 ( verdadeiro ).
+
+
+
+
+
+
+
+
+REPRESENTAÇÕES DE RELAÇÕES LÓGICAS:
+
+Notações:
+
+  Conjunção ( E )     Disjunção ( OU )      Negação ( NÃO )
+     (p e q)             (p ou q)               (não p)
+      p ⋀ q               p ⋁ q                  ¬p  
+  p • q  =  p q           p + q              /p = p' = p
+      p & q               p | q                  ~p
+      p && q              p || q                ! p
+
+Tabela verdade:
+
+  Conjunção ( E )     Disjunção ( OU )     Negação (NÃO )
+    p   q      s        p   q     s          p      s
+    0 • 0   =  0        0 + 0  =  0
+    0 • 1   =  0        0 + 1  =  1          0'  =  1
+    1 • 0   =  0        1 + 0  =  1          1'  =  0
+    1 • 1   =  1        1 + 1  =  1
+
+Portas-Lógicas:
+
+  s = AND ( p, q )     s = OR ( p, q )     s = NOT( p )
+       _____                _____               _____                                      
+  p --|     |          p --|     |             |     |\                                     
+      |  &  |-- s          | ≥1  |-- s     p --|  !  |-- s                                
+  q --|_____|          q --|_____|             |_____|                                     
+
+
+
+
+
+
+PRIORIDADE DE CONECTIVOS:
+
+Na álgebra de boole estabelece-se que a ordem de avaliação de uma expressão, envolvendo conectivos lógicos, será da esquerda para a direita. Entretanto, para certas aplicações (linguagens de programação) é usual atribuir prioridade aos conectivos como mostrado abaixo, sendo a primeira a mais alta, quando aplicada imediatamente a um valor.
+
+    NÃO 
+    E 
+    OU
+
+
+Pode-se alterar a ordem de avaliação por meio de parênteses.
+
+Exemplo:
+  Considere a expressão lógica: ( ! x && y )  || ( x && ! y ) de forma mais simples como ( x' • y ) + ( x • y' ).
+
+  A sua avaliação será feita na seguinte ordem de prioridade:
+
+  - negação de (x)    : x'
+  - conjunção com (y) : x'• y
+  - negação de (y)    : y'
+  - conjunção com (x) : x • y'
+  - disjunção das conjunções : (x' • y) + (x • y')
+
+  A expressão poderá ser representada nas formas tabular ( tabela-verdade ) ou por BDD ( Binary Decision Diagram ).
+
+  | n | x y | (x' • y) | (x • y') | (x'•y)+(x•y') |
+  |---|-----|----------|----------|---------------|
+  | 0 | 0 0 |    0     |    0     |       0       |
+  | 1 | 0 1 |    1     |    0     |       1       |
+  | 2 | 1 0 |    0     |    1     |       1       |
+  | 3 | 1 1 |    0     |    0     |       0       |
+
+Resumidamente as relações em uma tabela também poderão ser indicadas:
+
+Pela disjunção ( + ) das conjunções iguais a 1 ( ou mintermos ):
+
+  | n |    m   | x y | (x'• y) | (x • y') | (x'•y)+(x•y') |  mintermos ( = 1 )
+  |---|------- |-----|---------|----------|---------------|
+  | 0 | x'• y' | 0 0 |    0    |    0     |       0       |  m0 = x'• y' = 0
+  | 1 | x'• y  | 0 1 |    1    |    0     |       1       |  m1 = x'• y  = 1 ←
+  | 2 | x • y' | 1 0 |    0    |    1     |       1       |  m2 = x • y' = 2 ←
+  | 3 | x • y  | 1 1 |    0    |    0     |       0       |  m3 = x • y  = 3
+
+f (x, y ) = (x'•y)+(x•y') = m1 + m2 = ∑ m(1,2) = SoP(1,2)
+
+Pela conjunção ( . ) das disjunções iguais a 0 (ou MAXTERMOS) 
+
+  | N |   M   | X Y | (X+Y') | (X'+Y) | (X+Y')•(X'+Y) |  MAXTERMOS ( = 0 )
+  |---|-------|-----|--------|--------|---------------|
+  | 0 | X +Y  | 0 0 |   0    |    0   |       0       |  M0 = X  + Y  = 0 ←
+  | 1 | X +Y' | 0 1 |   1    |    0   |       1       |  M1 = X  + Y' = 1
+  | 2 | X'+Y  | 1 0 |   0    |    1   |       1       |  M2 = X' + Y  = 2
+  | 3 | X'+Y' | 1 1 |   0    |    0   |       0       |  M3 = X' + Y' = 3 ←
+
