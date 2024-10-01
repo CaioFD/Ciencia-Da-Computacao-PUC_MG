@@ -477,6 +477,7 @@ Por MAXTERMOS :
   5 101  0 <- A'+B+1  <- A'+0+C'
   6 110  
   7 111  0 <- 1+B'+C' <- A'+1+C
+  
 Método de Quine-McCluskey
 Exemplo para mintermos :
 Agrupar valores segundo a quantidade de bits iguais a 1 (para facilitar a identificação de grupos com dH=1) :
