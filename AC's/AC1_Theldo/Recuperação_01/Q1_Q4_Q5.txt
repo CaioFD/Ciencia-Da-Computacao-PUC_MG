@@ -1,0 +1,85 @@
+Pontifícia Universidade Católica de Minas Gerais
+Instituto de Ciências Exatas e Informática – ICEI
+Arquitetura de Computadores I
+
+ARQ1 - Recuperação 01
+Tema: Sistemas de Numeração e circuitos combinatórios
+
+Nome: Caio Faria Diniz
+Matrícula: 793605
+
+/------ Questao01 ------/
+Questão 01)
+a.) Expressão canônica para SoP(a,b,c,d)
+Os mintermos que resultam em 1 são: 4, 8, 9, C, D, E.
+𝑆𝑜𝑃(𝑎,𝑏,𝑐,𝑑) = 𝑎′𝑏′𝑐𝑑′ + 𝑎𝑏′𝑐′𝑑′ + 𝑎𝑏′𝑐′𝑑 + 𝑎𝑏𝑐′𝑑′ + 𝑎𝑏𝑐′𝑑 + 𝑎𝑏𝑐𝑑′
+
+b.) Expressão canônica para PoS(A,B,C,D)
+Os maxtermos que resultam em 0 são: 0, 1, 2, 3, 5, 6, 7, A, B, F.
+𝑃𝑜𝑆(𝐴,𝐵,𝐶,𝐷) = (𝐴+𝐵+𝐶+𝐷)(𝐴+𝐵+𝐶+𝐷′)(𝐴+𝐵+𝐶′+𝐷)(𝐴+𝐵+𝐶′+𝐷′)(𝐴+𝐵′+𝐶+𝐷′)(𝐴+𝐵′+𝐶′+𝐷′)
+
+c.) Simplificação de mintermos por mapa de Veitch-Karnaugh
+Simplificação do SoP:
+𝑆𝑜𝑃(𝑎,𝑏,𝑐,𝑑) = 𝑎𝑏′𝑐′+𝑎𝑏𝑐𝑑′
+ 
+d.) Simplificação de MAXTERMOS por mapa de Veitch-Karnaugh
+Simplificação do PoS:
+𝑃𝑜𝑆(𝐴,𝐵,𝐶,𝐷) = (𝐴+𝐵+𝐶)(𝐴′+𝐵′+𝐷)
+
+e.) Expressão SoP equivalente com portas NAND de 2 entradas (usar dupla negação)
+Usamos dupla negação para transformar a expressão SoP em portas NAND:
+𝑆𝑜𝑃(𝑎,𝑏,𝑐,𝑑) = ((𝑎𝑏′)′(𝑐′)′)′((𝑎𝑏𝑐)(𝑑′)′)′
+
+ 
+f.) Expressão PoS equivalente com portas NOR de 2 entradas (usar dupla negação)
+Transformamos a expressão PoS em portas NOR usando dupla negação:
+𝑃𝑜𝑆(𝐴,𝐵,𝐶,𝐷) = ((𝐴+𝐵+𝐶)′)′
+
+
+/------ Questao04 ------/
+Questão 04)
+
+a.) Representação com a menor quantidade de bits para sinal, expoente e mantissa
+374.5(8) convertido para decimal: 374.5(8) = 252.625(10)​
+
+  Precisamos representá-lo com o mínimo de bits:
+  Sinal: 1 bit.
+  Expoente: 8 bits.
+  Mantissa: com precisão.
+
+
+b.) IEEE-754
+Representação do valor +252.625 no formato IEEE-754:
+
+  Sinal: 0 (positivo).
+  Expoente: 8 bits, com bias de 127.
+  Mantissa: 23 bits.
+
+  
+/------ Questao05 ------/
+Questao 05)
+
+a.) Valor binário igual a NOT (174(8)) - C2,8(F8(16))
+Converter 174(8) para binário: = 00111100(2)
+
+Aplicar NOT: 
+𝑁𝑂𝑇(00111100(2)) = 11000011(2)
+
+Subtrair C2 de 𝐹8(16):
+F8 (16) = 11111000(2)
+Complemento de dois de 𝐹8(16): 𝐶2(11111000(2)) = 00000111(2)
+11000011(2) − 00000111(2) = 10111100(2()
+
+​
+b.) Tabela verdade para NOT( NAND( XOR(a,b), NOR(a, NOT(b)) ) )
+
+| a | b | XOR(a,b) | NOT(b) | NOR(a,NOT(b)) | NAND(XOR,NOR) | NOT(NAND) |
+|---|---|----------|--------|---------------|---------------|-----------|
+| 0 | 0 |    0     |   1    |       1       |       1       |     0     |
+|---|---|----------|--------|---------------|---------------|-----------|
+| 0 | 1 |    1     |   0    |       0       |       1       |     0     |
+|---|---|----------|--------|---------------|---------------|-----------|
+| 1 | 0 |    1     |   1    |       0       |       1       |     0     |
+|---|---|----------|--------|---------------|---------------|-----------|
+| 1 | 1 |    0     |   0    |       1       |       1       |     0     |
+|---|---|----------|--------|---------------|---------------|-----------|
