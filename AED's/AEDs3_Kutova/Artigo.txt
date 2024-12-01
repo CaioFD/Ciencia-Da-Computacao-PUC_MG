@@ -1,0 +1,17 @@
+Resenha do artigo: Lossless Compression Based KMP Technique
+
+Identificação do artigo:
+Gupta, K., Sharma, M., & Sharma, P. (2014). Lossless Compression Based KMP Technique. International Conference on Reliability, Optimization and Information Technology (ICROIT), Índia.
+
+Problema encontrado pelos autores:
+Os autores observaram o crescente desafio de armazenar e transmitir imagens digitais devido à alta demanda por espaço em disco e largura de banda, especialmente para imagens originais que ocupam grandes volumes de dados. Embora existam diversas técnicas de compressão, percebeu-se a necessidade de uma abordagem mais eficaz, que fosse simultaneamente rápida, econômica em termos de memória e simples de implementar, adaptando-se às exigências atuais.
+
+Síntese do trabalho:
+O artigo apresenta uma nova abordagem para compressão e descompressão de imagens sem perdas utilizando a técnica KMP. Este método identifica pixels repetidos em qualquer direção (horizontal, vertical, diagonal ou em padrões arbitrários) e os codifica atribuindo bits específicos para registrar as repetições e suas respectivas posições. O algoritmo desenvolvido busca minimizar o número de bits necessários para representar imagens sem comprometer a qualidade visual.
+
+Principais resultados:
+
+A técnica KMP proporcionou uma compressão média de 40% a 60%, com picos de até 70% em imagens com alta redundância, como aquelas com fundos uniformes.
+O método mostrou-se particularmente eficiente para imagens pequenas ou com padrões repetitivos, embora, para imagens maiores, a divisão em blocos menores seja necessária para melhores resultados.
+O KMP destacou-se por sua execução rápida e eficiente, sendo especialmente adequado para cenários em que há repetições de pixels em intervalos definidos.
+Os autores concluem que o KMP é uma alternativa promissora para compressão sem perdas em imagens de pequeno e médio porte, e sugerem o aperfeiçoamento da técnica para aplicações em imagens maiores no futuro.
