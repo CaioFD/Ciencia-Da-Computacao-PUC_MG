@@ -79,7 +79,6 @@ tabela_regras = pd.DataFrame({
 print("DataFrame com regras formatadas:")
 print(tabela_regras)
 print("// ========================== //")
-
 # Exibindo regras ordenadas por Lift
 print("Regras ordenadas por 'Lift':")
 print(tabela_regras.sort_values(by='Lift', ascending=False))
